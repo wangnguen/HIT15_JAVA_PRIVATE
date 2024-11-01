@@ -22,12 +22,20 @@ public class Bai1 {
       } else if (res < 10) {
         System.out.println(tenDonVi[donVi - 1]);
       } else if (res < 100) {
-        if (chuc != 0 && chuc != 0) {
+        if (chuc != 0 && donVi != 0) {
           System.out.println(tenChuc[chuc - 1] + " " + tenDonVi[donVi - 1]);
+        } else {
+          System.out.println(tenChuc[chuc - 1]);
         }
       } else {
         if (tram != 0 && chuc != 0 && donVi != 0) {
           System.out.println(tenTram[tram - 1] + " " + tenChuc[chuc - 1] + " " + tenDonVi[donVi - 1]);
+        } else if (tram != 0 && chuc != 0) {
+          System.out.println(tenTram[tram - 1] + " " + tenChuc[chuc - 1]);
+        } else if (tram != 0 && donVi != 0) {
+          System.out.println(tenTram[tram - 1] + " mươi " + tenDonVi[donVi - 1]);
+        } else {
+          System.out.println(tenTram[tram - 1]);
         }
       }
     }
