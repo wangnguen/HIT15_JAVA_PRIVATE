@@ -69,7 +69,7 @@ public class Main {
   }
 
   public static void sapXepTheoGia() {
-    Arrays.sort(books, new Comparator<Book>() {
+    Arrays.sort(books, 0, index, new Comparator<Book>() {
       public int compare(Book o1, Book o2) {
         if (o1.getGiaTien() < o2.getGiaTien()) {
           return -1;
@@ -81,13 +81,11 @@ public class Main {
   }
 
   public static void sapXepTheoTen() {
-    Arrays.sort(books, new Comparator<Book>() {
-
+    Arrays.sort(books, 0, index, new Comparator<Book>() {
       @Override
       public int compare(Book b1, Book b2) {
         return b1.getTenSach().compareToIgnoreCase(b2.getTenSach());
       }
-
     });
   }
 
