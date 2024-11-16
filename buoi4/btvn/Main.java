@@ -7,13 +7,19 @@ import java.util.Scanner;
 public class Main {
   public static int index = 5;
   public static Book[] books = new Book[100];
+  public static Author[] authors = new Author[100];
 
   public static void init() {
-    books[0] = new Book(1, "Toan", "Q", 2024, "Mo ta Toan", 105);
-    books[1] = new Book(2, "Tieng Viet", "T", 2023, "Mo ta Tieng Viet", 50);
-    books[2] = new Book(3, "Sinh Hoc", "K", 2020, "Mo ta Sinh Hoc", 40);
-    books[3] = new Book(4, "Lich Su", "H", 2021, "Mo ta Lich Su", 55);
-    books[4] = new Book(5, "Vat Li", "L", 2019, "Mo ta Vat Li", 96);
+    authors[0] = new Author("Q");
+    authors[1] = new Author("Tr");
+    authors[2] = new Author("K");
+    authors[3] = new Author("T");
+    authors[4] = new Author("H");
+    books[0] = new Book(1, "Toan", authors[0], 2024, "Mo ta Toan", 105);
+    books[1] = new Book(2, "Tieng Viet", authors[1], 2023, "Mo ta Tieng Viet", 50);
+    books[2] = new Book(3, "Sinh Hoc", authors[2], 2020, "Mo ta Sinh Hoc", 40);
+    books[3] = new Book(4, "Lich Su", authors[3], 2021, "Mo ta Lich Su", 55);
+    books[4] = new Book(5, "Vat Li", authors[4], 2019, "Mo ta Vat Li", 96);
   }
 
   public static void themSach() {

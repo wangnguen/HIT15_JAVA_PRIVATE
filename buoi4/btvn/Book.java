@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Book {
   private int maSach;
   private String tenSach;
-  private String tenTacGia;
+  private Author tenTacGia;
   private int namSanXuat;
   private String tomTatNoiDung;
   private double giaTien;
@@ -13,7 +13,7 @@ public class Book {
   public Book() {
   }
 
-  public Book(int maSach, String tenSach, String tenTacGia, int namSanXuat, String tomTatNoiDung, double giaTien) {
+  public Book(int maSach, String tenSach, Author tenTacGia, int namSanXuat, String tomTatNoiDung, double giaTien) {
     this.maSach = maSach;
     this.tenSach = tenSach;
     this.tenTacGia = tenTacGia;
@@ -38,11 +38,11 @@ public class Book {
     this.tenSach = tenSach;
   }
 
-  public String getTenTacGia() {
+  public Author getTenTacGia() {
     return tenTacGia;
   }
 
-  public void setTenTacGia(String tenTacGia) {
+  public void setTenTacGia(Author tenTacGia) {
     this.tenTacGia = tenTacGia;
   }
 
@@ -53,8 +53,7 @@ public class Book {
     sc.nextLine();
     System.out.println("nhap ten");
     this.tenSach = sc.nextLine();
-    System.out.println("Nhap tac gia");
-    this.tenTacGia = sc.nextLine();
+    this.tenTacGia.input();
     System.out.println("nhap nam san xuat");
     this.namSanXuat = sc.nextInt();
     sc.nextLine();
@@ -90,7 +89,8 @@ public class Book {
 
   @Override
   public String toString() {
-    return "Book [maSach=" + maSach + ", tenSach=" + tenSach + ", tenTacGia=" + tenTacGia + ", namSanXuat=" + namSanXuat
+    return "Book [maSach=" + maSach + ", tenSach=" + tenSach + ", tenTacGia=" + tenTacGia + ", namSanXuat="
+        + namSanXuat
         + ", tomTatNoiDung=" + tomTatNoiDung + ", giaTien=" + giaTien + "]";
   }
 
